@@ -1,0 +1,8 @@
+\* Hot_Tub_LP *\
+Maximize
+Profit: 350 AquaSpas + 300 HydroLuxes
+Subject To
+Labor_(hrs): 9 AquaSpas + 6 HydroLuxes <= 1566
+Pumps: AquaSpas + HydroLuxes <= 200
+Tubing_(ft): 12 AquaSpas + 16 HydroLuxes <= 2880
+End

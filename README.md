@@ -21,8 +21,4 @@ Eventually the plan is for this to hold all of the real content.
 
 See **Issues** then later remove all Issues when deploying the course.
 
-Gonna try to test out tags in git bash, you do this:
-git tag week06-start
-git push --tags
-
 

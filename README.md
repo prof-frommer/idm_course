@@ -2,6 +2,8 @@
 
 Course materials for Intermediate Deterministic Models (USCGA course)
 
+**⚠️ Do not edit files in your local copy of this repository.**  
+**Copy anything you want to work on into your own workspace.**
 
 
 Right now this just has sample content in it.  

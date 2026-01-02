@@ -1,1 +1,5 @@
-/student_work/* !/student_work/.gitkeep !/student_work/README.md
+# Student workspace (do not commit student files)
+
+/student_work/**
+!/student_work/.gitkeep
+!/student_work/README.md

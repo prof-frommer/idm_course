@@ -1,0 +1,22 @@
+name: idm
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10           # this version is ortools-friendly 
+  - spyder                
+  - jupyter               
+  - jupyterlab            
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy                 # Hungarian algorithm, etc.
+  - amply
+  - networkx
+  - pyomo
+  - ipopt
+  - cyipopt               # Ipopt Python wrapper
+  - glpk
+  - pip                   
+  - pip:
+      - ortools		  # plays nicer if installed here
+      - pulp>=3.3.0	  # ensures latest version installed

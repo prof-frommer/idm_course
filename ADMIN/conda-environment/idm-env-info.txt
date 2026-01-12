@@ -1,0 +1,8 @@
+Install command:
+  conda env create -n idm -f idm.yml
+
+Some package info:
+- ortools requires Python 3.10 and to be installed via pip
+- pulp is installed by pip to ensure latest version (conda used older one)
+- ipopt, cyipopt (python wrapper for ipopt) and glpk solvers added to yml for 2026; these are used by pyomo
+- opencv-contrib-python removed in 2026 due to possible conflicts with Spyder; it is only used on last day for EMD

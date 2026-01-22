@@ -1,0 +1,19 @@
+set products := Aqua Hydro Flow;
+
+set resources := pumps labor tubing;
+
+param 		profit :=
+	Aqua	350
+	Hydro	300
+	Flow	360;
+	
+param		avail  :=
+	pumps	200
+	labor	1566
+	tubing	2880  ;
+	
+param	req  :
+			Aqua	Hydro	Flow :=
+	pumps	1		1	    1
+	labor	9		6	    6
+	tubing	12		16  	18;

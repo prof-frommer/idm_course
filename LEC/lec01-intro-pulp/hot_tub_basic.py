@@ -28,7 +28,7 @@ print(hot_tub_lp)
 hot_tub_lp.writeLP('hot_tub_lp.txt')
 
 # Solve (argument to suppress GLPK output)
-result = hot_tub_lp.solve(GLPK(msg=False))
+result = hot_tub_lp.solve(PULP_CBC_CMD(msg=False))
 
 # Print solver status and optimal variable values
 print("Status: ",LpStatus[result])

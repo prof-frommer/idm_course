@@ -1,0 +1,30 @@
+set food_items := oats chicken eggs milk cake beans;
+
+set nutrients := calories protein calcium;
+
+param objective :=	
+    oats 30
+    chicken 240
+    eggs 130
+    milk 90
+    cake 200
+    beans 60;
+
+param		reqs :=
+    calories 2000
+    protein 55
+    calcium 800;
+    
+param	supply  :
+    	oats	chicken	eggs	milk	cake	beans :=
+calories 	110	205	160	160	420	260
+protein	    4	32	13	8	4	14
+calcium	    2	12	54	285	22	80;
+
+param     max_for_item :=	
+    oats 4
+    chicken 3
+    eggs 2
+    milk 8
+    cake 2
+    beans 2;

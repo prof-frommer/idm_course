@@ -1,0 +1,32 @@
+set food_items := Noodles TurkeyDivan PotatoSalad Beets CongoBars;
+
+set nutrients := Protein 	Iron	Niacin	Thiamin	VitaminC;
+
+param     objective :=	
+    Noodles     5000
+    TurkeyDivan 5000
+    PotatoSalad 7900
+    Beets        300
+    CongoBars  14300;
+
+param		reqs :=
+    Protein	63000
+    Iron	   10
+    Niacin	15
+    Thiamin	1
+    VitaminC  50;
+	
+param	supply  :
+			Protein	Iron	Niacin	Thiamin	VitaminC :=
+    Noodles	5000	1.1 	1.4 	0.18	0.0
+    TurkeyDivan	29300	1.8 	5.4 	0.06	0.0
+    PotatoSalad	5300	0.5 	0.9 	0.06	10.0
+    Beets	3000	2.2 	0.5	 0.07	28.0
+    CongoBars	4000	1.2 	0.6	 0.15	3.0;
+
+param     max_for_item :=	
+    Noodles     3
+    TurkeyDivan 3
+    PotatoSalad 2
+    Beets       1
+    CongoBars  1;

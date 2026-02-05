@@ -1,0 +1,17 @@
+set furniture := furniture1 furniture2;
+
+set resources := wood hours;
+
+param prices :=
+    furniture1 120
+    furniture2 80;
+    
+param avail :=
+    wood 6
+    labor 28;
+    
+param required :
+    furniture1 furniture2:=
+    wood 2 1
+    labor 7 8;
+

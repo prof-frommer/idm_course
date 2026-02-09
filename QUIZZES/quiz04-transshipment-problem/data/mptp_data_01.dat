@@ -1,0 +1,40 @@
+set locations := 'KCI' 'CHI' 'HOU' 'NRF' 'PAN' 'SJU';
+set weeks := 1 2 3 4 5 6;
+set arc_capac := 300;
+set arc_costs := 
+   ('KCI','HOU',50) 
+    ('KCI','NRF',38)
+    ('CHI','HOU',44)
+    ('CHI','NRF',40)
+    ('HOU','PAN',50)
+    ('HOU','SJU',55)
+    ('NRF','PAN',60)
+    ('NRF','SJU',58);
+ 
+set arc_times := 
+    ('KCI','HOU',1) 
+    ('KCI','NRF',1)
+    ('CHI','HOU',2)
+    ('CHI','NRF',2)
+    ('HOU','PAN',1)
+    ('HOU','SJU',1)
+    ('NRF','PAN',2)
+    ('NRF','SJU',2);
+    
+param supply :
+      1 2 3 4 :=
+  KCI 200 100 50 50
+  CHI 200 100 100 0;
+ 
+param demand :
+            3 4 5 6 :=
+    PAN 50 100 100 50
+    SJU 50 100 200 50;
+    
+param inv_capac :=
+    PAN 50
+    SJU 50;
+        
+param inv_cost :=
+    PAN 1
+    SJU 1;

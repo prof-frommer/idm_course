@@ -8,6 +8,7 @@ Course materials for Intermediate Deterministic Models (USCGA course)
 **See `ADMIN/Accessing Course Content using GitHub.docx` for guidance on using this repo.**  Ask me if you have any questions.
 
 ## Repository history and updates (except for minor ones)
+- **2026-02-10** - added hw05 files, lec08 files (in prior commit)
 - **2026-02-05** - added lec08 files including MPTP code and ICA handout
 - **2026-02-03** - added hw04, lec07 file (in prior commit)
 - **2026-01-26** - added lec05 materials on bin packing problem

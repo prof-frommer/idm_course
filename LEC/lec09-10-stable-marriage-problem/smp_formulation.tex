@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{xcolor}
+\renewcommand{\baselinestretch}{1.5} 
+\begin{document}
+
+\begin{center}
+	{\large\textbf{Stable Marriage Problem formulation}}
+\end{center}
+\begin{equation*}
+x_{ij} = \begin{cases}
+1, & \text{if man $i$ is assigned to woman $j$,} \\
+0, & \text{otherwise}
+\end{cases}
+\end{equation*}
+
+$P_i(j) = \text{preference ranking of individual $i$ for individual $j$}$
+\begin{equation*}
+\sum_{j=1}^n x_{ij} = 1, \quad \forall i \in \{1, 2, \dots, n\} \qquad \mbox{(each man is matched)}
+\end{equation*}
+\begin{equation*}
+\sum_{i=1}^n x_{ij} = 1, \quad \forall j \in \{1, 2, \dots, n\} \qquad \mbox{(each woman is matched)}
+\end{equation*}
+\begin{equation*}
+x_{ij} + \sum_{k:P_i(k)>P_i(j)}^n x_{ik} + \sum_{k:P_j(k)>P_j(i)}^n x_{kj} \quad \ge \quad 1
+ \quad \forall i,j \mbox{  pairs} \qquad \mbox{(stability constraint)}
+\end{equation*}
+\\
+Here are a few objective function possibilities:
+\begin{equation}
+\mbox{mens\_ranks} = \sum_{i,j} P_i(j) x_{ij}
+\end{equation}
+\begin{equation}
+\mbox{womens\_ranks} = \sum_{i,j} P_j(i) x_{ij}
+\end{equation}
+\begin{equation}
+\mbox{abs\_ranksum\_diff} = |\mbox{mens\_ranks} - \mbox{womens\_ranks}|
+\end{equation}
+We can minimize (1), (2), (1)+(2), or (3).
+
+To minimize (3), we need to reformulate it slightly to be in LP form.
+
+
+\begin{center}
+	{\large\textbf{Singer-Group Stable Matching Formulation}}
+\end{center}
+\begin{equation*}
+x_{ij} = \begin{cases}
+1, & \text{if singer $i$ is assigned to group $j$,} \\
+0, & \text{otherwise}
+\end{cases}
+\end{equation*}
+
+$P_i(j) = \text{preference ranking of entity $i$ for entity $j$}$
+\begin{equation*}
+\sum_{j=1}^n x_{ij} = 1, \quad \forall i \in \{1, 2, \dots, n\} \qquad \mbox{(each singer is matched)}
+\end{equation*}
+\begin{equation*}
+\sum_{i=1}^n x_{ij} = 1, \quad \forall j \in \{1, 2, \dots, n\} \qquad \mbox{(each group is matched)}
+\end{equation*}
+\begin{equation*}
+x_{ij} + \sum_{k:P_i(k)>P_i(j)}^n x_{ik} + \sum_{k:P_j(k)>P_j(i)}^n x_{kj} \quad \ge \quad 1
+\quad \forall i,j \mbox{  pairs} \qquad \mbox{(stability constraint)}
+\end{equation*}
+
+objective function possibility:
+\begin{equation}
+\mbox{singers\_ranks} = \sum_{i,j} P_i(j) x_{ij}
+\end{equation}
+
+\end{document}
